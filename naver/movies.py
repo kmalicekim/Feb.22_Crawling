@@ -8,7 +8,9 @@ soup = BeautifulSoup(resp, 'html.parser')
 # html.parser 를 이용하여 html의 parse tree를 만들어줌
 # print(type(soup)) # <class 'bs4.BeautifulSoup'> ---> 현재 soup은 beautifulsoup이라는 객체 형태임
 
-movies = soup.find_all('dl', class_='lst_dsc')  # css를 이용하여 가져오기 (현재 가져오고 싶은 건 제목과 별점)
+# movies = soup.find_all('dl', class_='lst_dsc')  # css를 이용하여 가져오기 (현재 가져오고 싶은 건 제목과 별점)
+movies = soup.find_all('dl', {"class":"lst_dsc"})  # 위랑 같음
+
 # print(movies)
 # print(movies[0])
 for movie in movies:
