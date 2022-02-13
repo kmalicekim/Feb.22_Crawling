@@ -27,7 +27,7 @@ for dl in dl_list:
 
     lst.append(tmp)
 
-# print(lst) ---> 한 리스트 안에 여러 딕셔너리가 담겨있는 형태
+# print(lst) --->  [{'title': '쇼미더럭키짱!', 'star': '9.29'}, {'title': '전지적 독자 시점', 'star': '9.97'}, ...]
 
 res = dict()
 res['webtoon'] = lst

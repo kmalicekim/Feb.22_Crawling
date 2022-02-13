@@ -26,12 +26,9 @@ soup = BeautifulSoup(resp.text, 'html.parser')
 # merged_list = list(zip(lst, title_list))
 # print(merged_list)    ===> 이건 한 페이지당 모든 제목을 가져온 게 아닌, 10개의 숫자를 매칭한 것 (착각했음)
 
-# 답
-# for title in titles:
-#     print(title.text.strip())
-
 
 paging = soup.find('nav', class_="pagination")
+# print(paging)
 """
 nums = list()
 for page in paging:

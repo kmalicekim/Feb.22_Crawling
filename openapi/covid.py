@@ -9,7 +9,7 @@ url = f'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInf
 
 resp = requests.get(url)
 tree = ElementTree.fromstring(resp.text)   # ElementTree를 사용하여 xml 문자열을 xml ParseTree로 만들겠다
-print(tree)   # <Element 'response' at 0x7fdd2d4f70e0> ---> ParseTree가 되었으니 객체가 되었음 (응답된 객체)
+# print(tree)   # <Element 'response' at 0x7fdd2d4f70e0> ---> ParseTree가 되었으니 객체가 되었음 (응답된 객체)
 
 for item in tree[1][0]:   # tree[1] = body (tree[0] 은 header) / tree[1][0] = <items>
     if item.find('gubun').text == '합계':
